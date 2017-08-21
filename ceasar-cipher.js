@@ -5,3 +5,14 @@
 // Write a function which takes a ROT13 encoded string as input and returns a decoded string.
 //
 // All letters will be uppercase. Do not transform any non-alphabetic character (i.e. spaces, punctuation), but do pass them on.
+
+
+function rot13(str) { // LBH QVQ VG!
+  // Replace everything thats a letter with the corresponding rotted letter
+  // Get the corresponding rotted letter in this function
+  return str.replace(/[A-Z]/g,letter => String.fromCharCode((letter.charCodeAt(0)%26)+65));
+  // return str.replace(/[A-Z]/g,L => String.fromCharCode((L.charCodeAt(0)%26)+65));
+}
+
+// Change the inputs below to test
+console.log(rot13("SERR PBQR PNZC"));
