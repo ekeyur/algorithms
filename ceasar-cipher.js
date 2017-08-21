@@ -8,6 +8,9 @@
 
 
 function rot13(str) { // LBH QVQ VG!
+  // str.replace(/[A-Z]/g,function(letter){
+  //   return String.fromCharCode(((letter.charCodeAt(0))%26)+65);
+  // });
   // Replace everything thats a letter with the corresponding rotted letter
   // Get the corresponding rotted letter in this function
   return str.replace(/[A-Z]/g,letter => String.fromCharCode((letter.charCodeAt(0)%26)+65));
