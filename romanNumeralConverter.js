@@ -2,7 +2,21 @@
 //
 // All roman numerals answers should be provided in upper-case.
 function convertToRoman(num) {
- return num;
+ //an array of roman numerals in order from largest to smallest
+ var romanNumerals = ['M', 'CM', 'D', 'CD', 'C', 'XC', 'L', 'XL', 'X', 'IX', 'V', 'IV', 'I'];
+ //an array of decimals values that match the index of the roman numerals
+ var decimals = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1];
+ //creates an empty string call romanized
+ var romanized='';
+
+ romanNumerals.map(function(val,i){
+   while(decimals[i]<= num){
+     romanized += romanNumerals[i];
+     num -= decimals[i];
+   }
+ });
+ return romanized;
+
 }
 
-convertToRoman(36);
+console.log(convertToRoman(36));
