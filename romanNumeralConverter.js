@@ -9,14 +9,13 @@ function convertToRoman(num) {
  //creates an empty string call romanized
  var romanized='';
 
- romanNumerals.map(function(val,i){
-   while(decimals[i]<= num){
-     romanized += romanNumerals[i];
-     num -= decimals[i];
+ romanNumerals.map(function(value,index){
+   while(decimals[index]<=num){
+     romanized += romanNumerals[index];
+     num -= decimals[index];
    }
  });
  return romanized;
-
 }
 
 console.log(convertToRoman(36));
