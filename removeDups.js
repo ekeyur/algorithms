@@ -18,15 +18,16 @@
 // }
 var removeDups = function(word){
 
-  let no_duplicates_word = '';
+  // let no_duplicates_word = '';
 
-  word.split('').map(letter => {
-    if(!no_duplicates_word.includes(letter)){
-      no_duplicates_word += letter;
-    }
-    
-  })
-  return no_duplicates_word;
+  // word.split('').map(letter => {
+  //   if(!no_duplicates_word.includes(letter)){
+  //     no_duplicates_word += letter;
+  //   }
+  // })
+
+  var no_duplicates_word = new Set(word.toLowerCase().split(''));
+  return [...no_duplicates_word].join('');
 }
 
 console.log(removeDups('Atlanta'));

@@ -1,5 +1,5 @@
 function translatePigLatin(str) {
-  var regex = /[aeiou]/gi
+  var regex = /[aeiou]/gi;
   var i = 0;
   var temp_string ='';
     if(str[0].match(regex)) {
