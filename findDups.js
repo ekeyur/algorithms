@@ -1,6 +1,6 @@
 // Find the duplicate elements in an array
 
-
+// Question from the js interview
 function findDups(arr){
     var obj = {};
     var dups = [];
