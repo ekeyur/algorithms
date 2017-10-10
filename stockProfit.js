@@ -2,6 +2,9 @@
 // First make the array of prices: [14,34,12,20,43,22].
 // There could be a situation where the stock price decline everyday: [52,43,34,23,15,10].
 // There might be some edge cases
+  //Edge case one: array to be atlest length of 2
+  // Edge case two: what if the array is in descending order
+  
 
 function profit(prices){
   if(prices.length < 2) {
